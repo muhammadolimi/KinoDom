@@ -39,6 +39,7 @@ cd src/KinoDom.API
 dotnet run
 
 # В отдельном терминале — frontend
+``` bash
 cd src/KinoDom.Blazor.UI
 dotnet run
 👥 Роли пользователей
@@ -53,5 +54,5 @@ dotnet run
 📊 История просмотров
 🛠 Админ-панель
 📄 Команда
-
+```
 Проект разработан в рамках обучения и практики разработки fullstack-приложений на .NET.
