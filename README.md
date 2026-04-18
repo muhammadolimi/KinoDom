@@ -7,6 +7,7 @@ Frontend: Blazor WASM + MudBlazor
 Backend: ASP.NET Core Web API (.NET 10)
 Database: PostgreSQL
 CI/CD: GitHub Actions
+``` bash
 📁 Структура проекта
 KinoDom/
 ├── src/
@@ -20,6 +21,7 @@ KinoDom/
 ├── .editorconfig
 ├── README.md
 └── KinoDom.sln
+```
 🚀 Начало работы
 Требования
 .NET 10 SDK
