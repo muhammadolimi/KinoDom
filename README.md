@@ -14,11 +14,10 @@ KinoDom/
 │   ├── KinoDom.API/        # ASP.NET Core Web API
 │   └── KinoDom.Blazor.UI/  # Blazor WASM + MudBlazor
 ├── docs/
-│   └── ADR/                # Architecture Decision Records
+│   └── erd.png                # Architecture Decision Records
 ├── .github/
 │   └── workflows/          # CI/CD
 ├── .gitignore
-├── .editorconfig
 ├── README.md
 └── KinoDom.sln
 ```
