@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/KinoDom.API/KinoDom.API.csproj" Id="7d73e2f7-8851-4438-b92a-1af5ae906385" />
+    <Project Path="src/KinoDom.Blazor.UI/KinoDom.Blazor.UI.csproj" />
+  </Folder>
+</Solution>
