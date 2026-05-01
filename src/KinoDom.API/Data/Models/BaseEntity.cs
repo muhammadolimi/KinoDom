@@ -2,8 +2,8 @@
 {
     public abstract class BaseEntity
     {
-        public Guid guid { get; set; }
-        public bool isActive { get; set; }
-        public DateTime createdAt { get; set; } 
+        public Guid Guid { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; } 
     }
 }
