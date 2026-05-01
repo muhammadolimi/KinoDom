@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KinoDom.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edf510cf51df62a309a344939414e2cf65a4512a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e321523b7bde4aec34ab2d905e52ff558a59446")]
 [assembly: System.Reflection.AssemblyProductAttribute("KinoDom.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KinoDom.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
