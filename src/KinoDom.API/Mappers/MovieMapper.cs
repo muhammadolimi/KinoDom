@@ -5,9 +5,23 @@ namespace KinoDom.API.Mappers
 {
     public static class MovieMapper
     {
-        public static Movie ToEntity(CreateMovieDto dto)
+        public static MovieDto ToDto(this Movie movie)
         {
-            return new Movie
+            return new MovieDto
+            {
+                Id = movie.Id,
+                Title = movie.Title,
+                ReleaseYear = movie.ReleaseYear,
+                DurationMinutes = movie.DurationMinutes,
+                PosterUrl = movie.PosterUrl,
+                TrailerUrl = movie.TrailerUrl,
+                AverageRating = movie.AverageRating
+            };
+        }
+        
+        public static MovieDto ToEntity(this CreateMovieDto dto)
+        {
+            return new MovieDto
             {
                 Title = dto.Title,
                 ReleaseYear = dto.ReleaseYear,
@@ -17,17 +31,15 @@ namespace KinoDom.API.Mappers
             };
         }
 
-        public static Movie ToDto(Movie movie)
+        public static MovieDto ToEntity(this UpdateMovieDto dto)
         {
-            return new Movie
+            return new MovieDto
             {
-                Id = movie.Id,
-                Title = movie.Title,
-                ReleaseYear = movie.ReleaseYear,
-                DurationMinutes = movie.DurationMinutes,
-                PosterUrl = movie.PosterUrl,
-                TrailerUrl = movie.TrailerUrl,
-                AverageRating = movie.AverageRating
+                Title = dto.Title,
+                ReleaseYear = dto.ReleaseYear,
+                DurationMinutes = dto.DurationMinutes,
+                PosterUrl = dto.PosterUrl,
+                TrailerUrl = dto.TrailerUrl
             };
         }
     }
