@@ -1,9 +1,9 @@
-﻿using KinoDom.API.Data.DTOs.WatchedList;
+﻿using KinoDom.API.Data.DTOs.WishList;
 using KinoDom.API.Data.Models;
 
 namespace KinoDom.API.Mappers;
 
-public static class WatchedListMapper
+public static class WishListMapper
 {
     public static WishListDto ToDto(this WatchedList watchedlist)
     {
@@ -15,9 +15,9 @@ public static class WatchedListMapper
         };
     }
 
-    public static WatchedList ToEntity(this CreateWishListDto dto, Guid userId)
+    public static WishList ToEntity(this CreateWishListDto dto, Guid userId)
     {
-        return new WatchedList
+        return new WishList
         {
             MovieId = dto.MovieId,
             UserId = userId
