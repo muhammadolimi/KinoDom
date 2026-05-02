@@ -9,8 +9,9 @@
         public String? TrailerUrl { get; set; }
         public float? AverageRating { get; set; }
 
-        // Navigation property for the many-to-many relationship with Genre
+        // Navigation properties
         public ICollection<MovieGenre> MovieGenres { get; set; }
+        public ICollection<WatchedList> WatchedLists { get; set; }
         public ICollection<Review> Reviews { get; set; }
     }
 }
