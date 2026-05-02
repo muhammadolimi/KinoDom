@@ -12,6 +12,7 @@
         // Navigation properties
         public ICollection<MovieGenre> MovieGenres { get; set; }
         public ICollection<WatchedList> WatchedLists { get; set; }
+        public ICollection<WatchedList> WishLists { get; set; }
         public ICollection<Review> Reviews { get; set; }
     }
 }

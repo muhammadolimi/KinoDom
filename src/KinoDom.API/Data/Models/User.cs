@@ -13,5 +13,6 @@ namespace KinoDom.API.Data.Models
         // navigation properties
         public ICollection<Review> Reviews { get; set; }
         public ICollection<WatchedList> WatchedList { get; set; }
+        public ICollection<WatchedList> WishList { get; set; }
     }
 }

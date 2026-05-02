@@ -1,4 +1,4 @@
-﻿namespace KinoDom.API.Data.DTOs.WatchedList
+﻿namespace KinoDom.API.Data.DTOs.WishList
 {
     public class WishListDto
     {
