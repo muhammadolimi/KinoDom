@@ -10,5 +10,9 @@ namespace KinoDom.API.Data.Models
         public string AvatarUrl { get; set; } = "https://www.gravatar.com/avatar/";
 
         public UserRole UserRole { get; set; } = UserRole.User;
+
+        // navigation properties
+
+        public ICollection<WatchedList> WatchedList { get; set; }
     }
 }
