@@ -1,6 +1,6 @@
 ﻿namespace KinoDom.API.Data.Models
 {
-    public class WishList
+    public class WishList : BaseEntity
     {
         public Guid MovieId { get; set; }
         public Guid UserId { get; set; }
