@@ -27,7 +27,7 @@ KinoDom/
 Docker (для базы данных)
 ▶️ Запуск
 # Клонируй репозиторий
-git clone https://github.com/your-org/KinoDom.git
+https://github.com/muhammadolimi/KinoDom
 cd KinoDom
 
 # Запусти базу данных
