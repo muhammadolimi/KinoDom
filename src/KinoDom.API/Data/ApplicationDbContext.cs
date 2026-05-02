@@ -10,6 +10,8 @@ public class ApplicationDbContext(DbContextOptions dbContextOptions) :
     public DbSet<Genre> Genres { get; set; }
     public DbSet<MovieGenre> MovieGenres { get; set; }
 
+    public DbSet<WatchedList> WatchLists { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

@@ -4,7 +4,7 @@
     {
         public string Name { get; set; }
 
-        // Navigation property for the many-to-many relationship with Movie
+        // Navigation properties
         public ICollection<MovieGenre> MovieGenres { get; set; }
     }
 }
