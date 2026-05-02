@@ -1,6 +1,6 @@
 ﻿namespace KinoDom.API.Data.DTOs.WatchedList
 {
-    public class WishListDto
+    public class WatchedListDto
     {
         public Guid Id { get; set; }
         public Guid MovieId { get; set; }

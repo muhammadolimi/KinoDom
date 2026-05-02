@@ -2,7 +2,7 @@
 
 namespace KinoDom.API.Data.DTOs.WatchedList
 {
-    public class CreateWishListDto
+    public class CreateWatchedListDto
     {
         public Guid MovieId { get; set; }
     }
