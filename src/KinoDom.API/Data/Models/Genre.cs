@@ -5,6 +5,6 @@
         public string Name { get; set; }
 
         // Navigation properties
-        public ICollection<MovieGenre> MovieGenres { get; set; }
+        public ICollection<MovieGenre> MovieGenres { get; set; } = [];
     }
 }

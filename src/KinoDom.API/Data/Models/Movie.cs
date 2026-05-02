@@ -10,9 +10,11 @@
         public float? AverageRating { get; set; }
 
         // Navigation properties
-        public ICollection<MovieGenre> MovieGenres { get; set; }
-        public ICollection<WatchedList> WatchedLists { get; set; }
-        public ICollection<WatchedList> WishLists { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public ICollection<Review> Reviews { get; set; } = [];
+        public ICollection<Rating> Ratings { get; set; } = [];
+        public ICollection<WatchedList> WishLists { get; set; } = [];
+        public ICollection<MovieGenre> MovieGenres { get; set; } = [];
+        public ICollection<WatchedList> WatchedLists { get; set; } = [];
+
     }
 }

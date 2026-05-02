@@ -11,8 +11,9 @@ namespace KinoDom.API.Data.Models
         public UserRole UserRole { get; set; } = UserRole.User;
 
         // navigation properties
-        public ICollection<Review> Reviews { get; set; }
-        public ICollection<WatchedList> WatchedList { get; set; }
-        public ICollection<WatchedList> WishList { get; set; }
+        public ICollection<Review> Reviews { get; set; } = [];
+        public ICollection<WatchedList> WishList { get; set; } = [];
+        public ICollection<WatchedList> WatchedList { get; set; } = [];
+
     }
 }
