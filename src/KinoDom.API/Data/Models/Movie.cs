@@ -11,6 +11,5 @@
 
         // Navigation property for the many-to-many relationship with Genre
         public ICollection<MovieGenre> MovieGenres { get; set; }
-
     }
 }
