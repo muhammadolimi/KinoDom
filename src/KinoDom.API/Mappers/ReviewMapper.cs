@@ -1,6 +1,4 @@
 ﻿using KinoDom.API.Data.DTOs.Review;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Query.ExpressionTranslators.Internal;
-using System.Runtime.CompilerServices;
 using KinoDom.API.Data.Models;
 
 namespace KinoDom.API.Mappers
@@ -12,7 +10,8 @@ namespace KinoDom.API.Mappers
             {
                 Id = review.Id,
                 MovieId = review.MovieId,
-                Text = review.Text
+                Text = review.Text,
+                CreatedAt = review.CreatedAt
             };
         }
 
@@ -21,7 +20,8 @@ namespace KinoDom.API.Mappers
             return new Review
             {
                 MovieId = dto.MovieId,
-                Text = dto.Text
+                Text = dto.Text,
+                CreatedAt = DateTime.UtcNow
             };
         }
 

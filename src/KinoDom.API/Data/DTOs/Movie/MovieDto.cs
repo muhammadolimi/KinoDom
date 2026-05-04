@@ -9,5 +9,6 @@
         public string? PosterUrl { get; set; }
         public string? TrailerUrl { get; set; }
         public float? AverageRating { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }
