@@ -15,13 +15,14 @@ namespace KinoDom.API.Mappers
                 DurationMinutes = movie.DurationMinutes,
                 PosterUrl = movie.PosterUrl,
                 TrailerUrl = movie.TrailerUrl,
-                AverageRating = movie.AverageRating
+                AverageRating = movie.AverageRating,
+                CreatedAt = movie.CreatedAt
             };
         }
-        
-        public static MovieDto ToEntity(this CreateMovieDto dto)
+
+        public static Movie ToEntity(this CreateMovieDto dto)  // Fixed: now returns Movie
         {
-            return new MovieDto
+            return new Movie
             {
                 Title = dto.Title,
                 ReleaseYear = dto.ReleaseYear,
@@ -31,9 +32,9 @@ namespace KinoDom.API.Mappers
             };
         }
 
-        public static MovieDto ToEntity(this UpdateMovieDto dto)
+        public static Movie ToEntity(this UpdateMovieDto dto)  // Fixed: now returns Movie
         {
-            return new MovieDto
+            return new Movie
             {
                 Title = dto.Title,
                 ReleaseYear = dto.ReleaseYear,

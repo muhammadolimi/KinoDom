@@ -5,9 +5,9 @@ namespace KinoDom.API.Mappers;
 
 public static class WatchedListMapper
 {
-    public static WishListDto ToDto(this WatchedList watchedlist)
+    public static WatchedListDto ToDto(this WatchedList watchedlist)
     {
-        return new WishListDto
+        return new WatchedListDto
         {
             Id = watchedlist.Id,
             MovieId = watchedlist.MovieId,
@@ -15,12 +15,12 @@ public static class WatchedListMapper
         };
     }
 
-    public static WatchedList ToEntity(this CreateWishListDto dto, Guid userId)
+    public static WatchedList ToEntity(this CreateWatchedListDto dto, Guid userId)
     {
         return new WatchedList
         {
             MovieId = dto.MovieId,
-            UserId = userId
+            CreatedAt = DateTime.UtcNow
         };
     }
 }

@@ -11,7 +11,8 @@ namespace KinoDom.API.Mappers
             {
                 Id = rating.Id,
                 MovieId = rating.MovieId,
-                Score = rating.Score
+                Score = rating.Score,
+                CreatedAt = rating.CreatedAt
             };
         }
 
@@ -20,7 +21,8 @@ namespace KinoDom.API.Mappers
             return new Rating
             {
                 MovieId = dto.MovieId,
-                Score = dto.Score
+                Score = dto.Score,
+                CreatedAt = DateTime.UtcNow
             };
         }
 

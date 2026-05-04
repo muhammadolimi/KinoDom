@@ -1,22 +1,33 @@
 ﻿using KinoDom.API.Data.DTOs.Genre;
 using KinoDom.API.Data.Models;
 
-public static class GenreMapper
+namespace KinoDom.API.Mappers
 {
-    public static Genre ToEntity(CreateGenreDto dto)
+    public static class GenreMapper
     {
-        return new Genre
+        public static GenreDto ToDto(this Genre genre)
         {
-            Name = dto.Name
-        };
-    }
+            return new GenreDto
+            {
+                Id = genre.Id,
+                Name = genre.Name
+            };
+        }
 
-    public static GenreDto ToDto(Genre genre)
-    {
-        return new GenreDto
+        public static Genre ToEntity(this CreateGenreDto dto)
         {
-            Id = genre.Id,
-            Name = genre.Name
-        };
+            return new Genre
+            {
+                Name = dto.Name
+            };
+        }
+
+        public static Genre ToEntity(this UpdateGenreDto dto)
+        {
+            return new Genre
+            {
+                Name = dto.Name
+            };
+        }
     }
 }

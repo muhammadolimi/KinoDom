@@ -7,5 +7,7 @@ namespace KinoDom.API.Data.DTOs.Review
         public Guid Id { get; set; }
         public Guid MovieId { get; set; }
         public String Text { get; set; }
+        public DateTime CreatedAt { get; set; }
+
     }
 }
