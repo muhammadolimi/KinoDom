@@ -33,7 +33,6 @@ namespace KinoDom.API.Repositories.Implementations
         {
             // Add the new genre to the context and save changes
             await _context.Genres.AddAsync(genre);
-
             await _context.SaveChangesAsync();
 
             return genre;
@@ -52,6 +51,7 @@ namespace KinoDom.API.Repositories.Implementations
             existingGenre.Name = genre.Name;
 
             await _context.SaveChangesAsync();
+
             return existingGenre;
         }
 
