@@ -38,7 +38,8 @@ namespace KinoDom.API.Repositories.Implementations
 
             existingUser.Username = user.Username;
             existingUser.Email = user.Email;
-            existingUser.PasswordHash = user.PasswordHash;
+            existingUser.AvatarUrl = user.AvatarUrl;
+            existingUser.UserRole = user.UserRole;
 
             await _context.SaveChangesAsync();
 
