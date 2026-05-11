@@ -11,6 +11,7 @@ namespace KinoDom.API.Mappers
             {
                 Id = movie.Id,
                 Title = movie.Title,
+                Description = movie.Description,
                 ReleaseYear = movie.ReleaseYear,
                 DurationMinutes = movie.DurationMinutes,
                 PosterUrl = movie.PosterUrl,
@@ -25,6 +26,7 @@ namespace KinoDom.API.Mappers
             return new Movie
             {
                 Title = dto.Title,
+                Description = dto.Description,
                 ReleaseYear = dto.ReleaseYear,
                 DurationMinutes = dto.DurationMinutes,
                 PosterUrl = dto.PosterUrl,
@@ -37,6 +39,7 @@ namespace KinoDom.API.Mappers
             return new Movie
             {
                 Title = dto.Title,
+                Description = dto.Description,
                 ReleaseYear = dto.ReleaseYear,
                 DurationMinutes = dto.DurationMinutes,
                 PosterUrl = dto.PosterUrl,
