@@ -23,6 +23,7 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 
 // Services
