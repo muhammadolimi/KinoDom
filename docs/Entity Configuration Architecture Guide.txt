@@ -1,0 +1,105 @@
+КОНФИГУРАЦИИ EF CORE
+
+Для всех моделей в проекте конфигурации создаются по единому шаблону.
+Шаблон смотреть по примеру GenreConfiguration и MovieConfiguration.
+
+Конфигурация нужна, чтобы настроить:
+- ключи
+- обязательные поля
+- длину строк
+- уникальность
+- связи между таблицами
+- поведение при удалении
+
+--------------------------------------------------
+
+СТРУКТУРА
+
+Configurations
+│
+├── GenreConfiguration.cs
+├── MovieConfiguration.cs
+├── ReviewConfiguration.cs
+├── RatingConfiguration.cs
+├── UserConfiguration.cs
+└── [ModelName]Configuration.cs
+
+--------------------------------------------------
+
+ОБЩИЙ ШАБЛОН ФАЙЛА
+
+using KinoDom.API.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace KinoDom.API.Configurations
+{
+    internal class [ModelName]Configuration : IEntityTypeConfiguration<[ModelName]>
+    {
+        public void Configure(EntityTypeBuilder<[ModelName]> builder)
+        {
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.PropertyName)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            builder.HasIndex(x => x.PropertyName)
+                .IsUnique();
+
+            builder.HasMany(x => x.Children)
+                .WithOne(x => x.Parent)
+                .HasForeignKey(x => x.ParentId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
+    }
+}
+
+--------------------------------------------------
+
+ЧТО ОБЫЧНО ПИШЕМ
+
+1. Первичный ключ
+
+builder.HasKey(x => x.Id);
+
+2. Свойства
+
+builder.Property(x => x.Name)
+    .IsRequired()
+    .HasMaxLength(100);
+
+3. Уникальность
+
+builder.HasIndex(x => x.Name)
+    .IsUnique();
+
+4. Связь один ко многим
+
+builder.HasMany(x => x.Children)
+    .WithOne(x => x.Parent)
+    .HasForeignKey(x => x.ParentId)
+    .OnDelete(DeleteBehavior.Cascade);
+
+5. Связь многие к одному
+
+builder.HasOne(x => x.Parent)
+    .WithMany(x => x.Children)
+    .HasForeignKey(x => x.ParentId)
+    .OnDelete(DeleteBehavior.Cascade);
+
+--------------------------------------------------
+
+ВАЖНО
+
+- Один файл конфигурации = одна модель
+- Название: [ModelName]Configuration
+- Класс наследуется от IEntityTypeConfiguration<[ModelName]>
+- Внутри всегда метод Configure
+- Конфигурация работает только с настройкой таблиц и связей
+- CRUD здесь НЕ писать
+- DTO здесь НЕ использовать
+- Mapper здесь НЕ использовать
+- Repository здесь НЕ использовать
+- Service здесь НЕ использовать
+- Controller здесь НЕ создавать
