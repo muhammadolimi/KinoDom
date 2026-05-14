@@ -14,6 +14,7 @@ namespace KinoDom.API.Data.Models
         public ICollection<Review> Reviews { get; set; } = [];
         public ICollection<WishList> WishLists { get; set; } = [];
         public ICollection<WatchedList> WatchedLists { get; set; } = [];
+        public ICollection<Rating> Ratings { get; set; } = [];
 
     }
 }
