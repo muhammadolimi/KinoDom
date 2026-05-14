@@ -2,7 +2,7 @@
 {
     public class Genre : BaseEntity
     {
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         // Navigation properties
         public ICollection<MovieGenre> MovieGenres { get; set; } = [];

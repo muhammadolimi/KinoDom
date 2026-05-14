@@ -1,10 +1,12 @@
 ﻿using KinoDom.API.Data;
 using KinoDom.API.Data.Models;
+using KinoDom.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace KinoDom.API.Repositories.Implementations
+
 {
-    public class WatchedListRepository
+    public class WatchedListRepository : IWatchedListRepository
     {
         private readonly ApplicationDbContext _context;
 

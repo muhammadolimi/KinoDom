@@ -5,13 +5,13 @@ namespace KinoDom.API.Mappers;
 
 public static class WishListMapper
 {
-    public static WishListDto ToDto(this WatchedList watchedlist)
+    public static WishListDto ToDto(this WishList wishList)
     {
         return new WishListDto
         {
-            Id = watchedlist.Id,
-            MovieId = watchedlist.MovieId,
-            CreatedAt = watchedlist.CreatedAt
+            Id = wishList.Id,
+            MovieId = wishList.MovieId,
+            CreatedAt = wishList.CreatedAt
         };
     }
 
