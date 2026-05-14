@@ -16,11 +16,6 @@ namespace KinoDom.API.Configurations
 
             builder.HasIndex(x => x.Name)
                  .IsUnique();
-
-            builder.HasMany(x => x.MovieGenres)
-                .WithOne(x => x.Genre)
-                .HasForeignKey(x => x.GenreId)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
