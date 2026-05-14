@@ -7,6 +7,7 @@ namespace KinoDom.API.Repositories.Interfaces
         Task<List<WatchedList>> GetAllAsync();
         Task<WatchedList?> GetByIdAsync(Guid id);
         Task<WatchedList> CreateAsync(WatchedList watchedList);
+        Task<WatchedList?> UpdateAsync(Guid id, WatchedList watchedList);
         Task<bool> DeleteAsync(Guid id);
     }
 }

@@ -28,6 +28,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IWishListRepository, WishListRepository>();
 builder.Services.AddScoped<IWatchedListRepository, WatchedListRepository>();
 builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 
