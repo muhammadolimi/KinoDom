@@ -32,6 +32,20 @@ namespace KinoDom.API.Repositories.Implementations
 
             return watchedList;
         }
+        public async Task<WatchedList?> UpdateAsync(Guid id, WatchedList watchedList)
+        {
+            var existingWatchedList = await _context.WatchedLists.FindAsync(id);
+
+            if (existingWatchedList == null)
+                return null;
+            
+            existingWatchedList.UserId = watchedList.UserId;
+            existingWatchedList.MovieId = watchedList.MovieId;
+            
+            await _context.SaveChangesAsync();
+            
+            return existingWatchedList;
+        }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
