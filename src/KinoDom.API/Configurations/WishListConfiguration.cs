@@ -1,7 +1,6 @@
 ﻿using KinoDom.API.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Extensions.Logging.Abstractions;
 
 namespace KinoDom.API.Configurations
 {

@@ -4,10 +4,10 @@ namespace KinoDom.API.Data.Models
 {
     public class User : BaseEntity
     {
-        public string Username { get; set; }     
-        public string Email { get; set; }  
-        public string PasswordHash { get; set; }  
-        public string AvatarUrl { get; set; } = "https://www.gravatar.com/avatar/";
+        public String Username { get; set; }     
+        public String Email { get; set; }  
+        public String PasswordHash { get; set; }  
+        public String AvatarUrl { get; set; } = "https://www.gravatar.com/avatar/";
         public UserRole UserRole { get; set; } = UserRole.User;
 
         // navigation properties
