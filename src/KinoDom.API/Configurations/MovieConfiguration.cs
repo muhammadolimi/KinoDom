@@ -25,31 +25,6 @@ namespace KinoDom.API.Configurations
 
             builder.Property(x => x.TrailerUrl)
                 .HasMaxLength(255);
-
-            builder.HasMany(m => m.Reviews)
-                .WithOne(r => r.Movie)
-                .HasForeignKey(r => r.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(m => m.Ratings)
-                .WithOne(r => r.Movie)
-                .HasForeignKey(r => r.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(m => m.WishLists)
-                .WithOne(w => w.Movie)
-                .HasForeignKey(w => w.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(m => m.MovieGenres)
-                .WithOne(mg => mg.Movie)
-                .HasForeignKey(mg => mg.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(m => m.WatchedLists)
-                .WithOne(w => w.Movie)
-                .HasForeignKey(w => w.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
