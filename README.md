@@ -86,6 +86,11 @@ All entities inherit from `BaseEntity` which provides `Id` (Guid), `IsActive` (b
 git clone https://github.com/muhammadolimi/KinoDom.git
 cd KinoDom
 
+# Create local configuration
+cp src/KinoDom.API/appsettings.json.example src/KinoDom.API/appsettings.json
+
+# Configure PostgreSQL connection string and JWT settings
+
 # Start the database
 docker-compose up -d
 
