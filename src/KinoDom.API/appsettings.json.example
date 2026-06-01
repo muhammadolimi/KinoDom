@@ -1,0 +1,18 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Database=KinoDomDb;Username=postgres;Password=your_password"
+  },
+  "Jwt": {
+    "Key": "YourSuperSecretKeyAtLeast32CharactersLong",
+    "Issuer": "KinoDom.API",
+    "Audience": "KinoDom.Client",
+    "ExpiryInMinutes": 60
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
