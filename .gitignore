@@ -65,7 +65,7 @@ packages/
 .env
 .env.*
 appsettings.Development.json
-
+appsettings.json
 # =========================
 # Publish / Deploy
 # =========================
